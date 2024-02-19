@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype-variations');
+    font-weight: 400 800;
+}
+
+:root {
+    --main-bg-color: hsla(241, 72%, 46%, 0);
+    --main-text-color: hsl(30, 10%, 34%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    height: 510px;
+    width: 735px;
+    background-color: white;
+    box-shadow: 1px 2px 5px 2px rgba(235, 241, 255, 0.75);
+    -webkit-box-shadow: 1px 2px 5px 2px rgba(235, 241, 255, 0.75);
+    -moz-box-shadow: 1px 2px 5px 2px rgba(235, 241, 255, 0.75);
+    border-radius: 30px;
+}
+
+.card-main {
+    /* border-radius: 30px;
+    display: grid;
+    align-content: space-around;
+    justify-content: center;
+    text-align: center;
+    background-image:
+        linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    background-image: linear-gradient(hsl(252, 100%, 64%), hsl(241, 81%, 54%));
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-main h2 {
+    color: hsl(241, 100%, 89%);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: -10px;
+    letter-spacing: .02rem;
+}
+
+.card-main-score {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 45%, 1), hsla(241, 72%, 46%, 0));
+    /* background-image: linear-gradient(hsla(254.64, 70.59%, 46.67%, 1), hsla(246.1, 85.39%, 57.06%, 0.2)); */
+    display: grid;
+    align-content: center;
+    color: hsl(241, 100%, 80%);
+    margin-top: -0.9rem;
+}
+
+.card-score-total {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: -5px;
+}
+
+.card-main h1 {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: -1.4rem 0 -2rem;
+    letter-spacing: 0.05rem;
+}
+
+.card-main p:last-of-type {
+    padding: 0 3rem;
+    color: hsl(241, 100%, 85%);
+}
+
+.card-summary {
+    padding: 40px;
+}
+
+.card-summary h2 {
+    font-size: 1.33rem;
+    font-weight: 600;
+    color: hsl(224, 30%, 27%);
+    margin-bottom: 1.4rem;
+}
+
+.card-summary article {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 17px 15px;
+    border-radius: 10px;
+    margin-bottom: 0.9rem;
+    position: relative;
+}
+
+.summary-top-right-border,
+.summary-top-left-border,
+.summary-bottom-left-border,
+.summary-bottom-right-border {
+    content: '';
+    position: absolute;
+    border: 0.5px solid transparent;
+    border-left-color: rgb(255, 176, 176);
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+    bottom: 0;
+}
+
+.summary-top-right-border,
+.summary-top-left-border {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.summary-top-left-border {
+    right: 0;
+    transform: rotate(145deg);
+}
+
+.summary-bottom-left-border {
+    transform: rotate(-45deg);
+    left: 0;
+}
+
+.summary-bottom-right-border {
+    transform: rotate(-145deg);
+    right: 0;
+}
+
+.border-yellow.summary-top-right-border,
+.border-yellow.summary-top-left-border,
+.border-yellow.summary-bottom-left-border,
+.border-yellow.summary-bottom-right-border {
+    border-left-color: rgb(240, 243, 67);
+}
+
+.border-green.summary-top-right-border,
+.border-green.summary-top-left-border,
+.border-green.summary-bottom-left-border,
+.border-green.summary-bottom-right-border {
+    border-left-color: rgb(119, 255, 74);
+}
+
+.border-blue.summary-top-right-border,
+.border-blue.summary-top-left-border,
+.border-blue.summary-bottom-left-border,
+.border-blue.summary-bottom-right-border {
+    border-left-color: rgb(148, 167, 233);
+}
+
+.card-summary article:nth-of-type(1) {
+    background-color: #FFF6F6;
+}
+
+.card-summary article:nth-of-type(2) {
+    background-color: #FFFBF2;
+}
+
+.card-summary article:nth-of-type(3) {
+    background-color: #F3FBFA;
+}
+
+.card-summary article:nth-of-type(4) {
+    background-color: #F3F3FD;
+    margin-bottom: 2rem;
+}
+
+.card-summary article div {
+    display: flex;
+}
+
+.card-summary-item-left img {
+    margin-right: 12px;
+}
+
+.card-summary article:nth-of-type(1) .card-summary-item-left sub {
+    color: hsl(0, 100%, 67%);
+}
+
+.card-summary article:nth-of-type(2) .card-summary-item-left sub {
+    color: hsl(39, 100%, 56%);
+}
+
+.card-summary article:nth-of-type(3) .card-summary-item-left sub {
+    color: hsl(166, 100%, 37%);
+}
+
+.card-summary article:nth-of-type(4) .card-summary-item-left sub {
+    color: hsl(234, 85%, 45%);
+}
+
+.card-summary-item-right {
+    justify-self: end;
+    color: hsl(224, 30%, 60%);
+    font-weight: 500;
+}
+
+.card-summary-item-right span {
+    color: hsl(224, 30%, 27%);
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.card-summary button {
+    width: 100%;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(221, 100%, 96%);
+    font-weight: 500;
+    border-radius: 40px;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.card-summary button:hover,
+.card-summary button:active {
+    background-image: linear-gradient(hsl(252, 100%, 64%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 850px) {
+    .card {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1.2fr;
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .card-main-score {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-summary {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 675px) {
+    .card-main {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+    }
+}
